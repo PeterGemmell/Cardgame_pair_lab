@@ -19,4 +19,14 @@ public class Deck {
     public int cardCount(){
       return cards.size();
     }
+
+
+    public void populateDeck(){
+      for(SuitType suit : SuitType.values()){
+          for(RankType rank : RankType.values()){
+              Card card = new Card(rank, suit);
+              this.addCard(card);
+          }
+      }
+    }
 }
