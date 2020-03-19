@@ -43,4 +43,9 @@ public class Deck {
         Card card = this.getFirstCard();
         playerName.addCard(card);
     }
+
+    public Card dealOne(){
+        return this.cards.remove(0);
+    }
 }
+

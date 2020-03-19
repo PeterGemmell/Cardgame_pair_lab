@@ -54,6 +54,12 @@ public class DeckTest {
         assertEquals(topCard, peter.getFirstCard());
     }
 
+    @Test
+    public void cardsCanBeRemovedFromDeck(){
+        deck.dealOne();
+        assertEquals(51, deck.cardCount());
+    }
+
 
 }
 
