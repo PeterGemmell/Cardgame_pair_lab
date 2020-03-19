@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
 
@@ -28,5 +29,13 @@ public class Deck {
               this.addCard(card);
           }
       }
+    }
+
+    public void shuffleDeck(){
+        Collections.shuffle(cards);
+    }
+
+    public Card getFirstCard(){
+      return this.cards.get(0);
     }
 }
