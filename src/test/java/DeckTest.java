@@ -9,12 +9,14 @@ public class DeckTest {
     private Deck deck;
     private Card aceofClubs;
     private Card kingofHearts;
+    private Player peter;
 
     @Before
     public void before(){
         deck = new Deck();
         aceofClubs = new Card(RankType.ACE, SuitType.CLUBS);
         kingofHearts = new Card(RankType.KING, SuitType.HEARTS);
+        peter = new Player("peter");
     }
 
     @Test
@@ -42,6 +44,16 @@ public class DeckTest {
         Card shuffledCard = deck.getFirstCard();
         assertNotEquals(firstCard,shuffledCard);
     }
+
+    @Test
+    public void canDealCard(){
+        deck.populateDeck();
+        deck.shuffleDeck();
+        Card topCard = deck.getFirstCard();
+        deck.dealFirstCard(peter);
+        assertEquals(topCard, peter.getFirstCard());
+    }
+
 
 }
 

@@ -38,4 +38,9 @@ public class Deck {
     public Card getFirstCard(){
       return this.cards.get(0);
     }
+
+    public void dealFirstCard(Player playerName){
+        Card card = this.getFirstCard();
+        playerName.addCard(card);
+    }
 }
