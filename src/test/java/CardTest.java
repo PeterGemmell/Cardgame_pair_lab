@@ -15,6 +15,6 @@ public class CardTest {
 
     @Test
     public void cardHasName(){
-        assertEquals("EIGHT of CLUBS", card.getName());
+        assertEquals("8 of CLUBS", card.getName());
     }
 }
